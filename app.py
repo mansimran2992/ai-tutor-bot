@@ -144,3 +144,6 @@ def chat():
 
 #    return render_template("flashcards.html", flashcards=cards)
 
+if __name__ == "__main__":
+    app.run()
+
