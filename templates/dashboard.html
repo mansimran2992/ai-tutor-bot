@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TutorBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>TutorBot</h1>
+    <p>Intelligent Study Assistant for Personalized Learning</p>
+</header>
+
+<div class="main-container">
+
+    <!-- CENTER: UPLOAD SECTION -->
+    <section class="upload-section">
+        <h2>📤 Upload Study Notes</h2>
+
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
+
+        <div id="upload-status"></div>
+
+        <div class="actions">
+            <button>Summarize</button>
+            <button>Generate Quiz</button>
+            <button>Flashcards</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📝 How to use</h3>
+            <ol>
+                <li>Upload your notes (PDF or image)</li>
+                <li>Wait for confirmation</li>
+                <li>Choose an action</li>
+                <li>Chat with the AI tutor</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- RIGHT: CHAT SECTION -->
+    <section class="chat-section">
+        <h2>💬 AI Tutor Chat</h2>
+
+        <div id="chat-box"></div>
+
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Ask your tutor..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+</div>
+
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

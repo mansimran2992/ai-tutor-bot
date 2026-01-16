@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Flashcards</title>
+    <link rel="stylesheet" href="/static/flashcards.css">
+</head>
+<body>
+
+<h1>🃏 AI Flashcards</h1>
+
+<div class="cards">
+    {% for card in flashcards %}
+        <div class="card" onclick="this.classList.toggle('flip')">
+            <div class="front">{{ card.question }}</div>
+            <div class="back">{{ card.answer }}</div>
+        </div>
+    {% endfor %}
+</div>
+
+<p>👉 Click a card to flip</p>
+
+</body>
+</html>

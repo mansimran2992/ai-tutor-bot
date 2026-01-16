@@ -1,0 +1,20 @@
+<h1>📘 AI Tutor Learning Assistant</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+
+    <select name="action">
+        <option value="summary">Summarize Notes</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="flashcards">Create Flashcards</option>
+    </select>
+
+    <button type="submit">Process</button>
+</form>
+
+{% if result %}
+<div class="reply">
+    <h3>AI Output</h3>
+    <pre>{{ result }}</pre>
+</div>
+{% endif %}
